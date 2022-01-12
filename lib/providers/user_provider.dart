@@ -17,7 +17,11 @@ class UserProvider with ChangeNotifier {
   setUser(User user) => this.user = user;
 
   Future<void> fetchUsers({required String query}) async {
+    debugPrint('userProvider');
     users = await _userRepository.getUsers(query: query);
+    for (var item in users) {
+      debugPrint('item = ${item.name}');
+    }
     notifyListeners();
   }
 
