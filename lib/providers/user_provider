@@ -10,7 +10,7 @@ class UserProvider with ChangeNotifier {
 
   UserProvider({this.users, this.user});
 
-  getUsers() => this.users;
+  getUsers() => users;
   setUsers(List<User> users) => this.users = users;
 
   getUser() => this.user;
